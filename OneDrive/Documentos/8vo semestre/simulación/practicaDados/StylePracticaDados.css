@@ -1,0 +1,64 @@
+#background{
+	background: linear-gradient(to bottom,#cacaca, #eaeaea, #f3f4f5, #ffffff, #ffffff);
+}
+#wrap1{
+	width: 100%;
+}
+#title{
+	color:#00145D  ;
+	border-radius: 10px;
+	border-width: 5px;
+	border-color:  #00145D;
+}
+#dado1{
+	border-style: solid;
+	border-width: 2px;
+	border-color:#FFCDCD;
+	width: 80px;
+	height: 80px;
+	background:#FFE8E8;
+	border-radius: 10px;
+	
+}
+#dado2{
+	border-style: solid;
+	border-width: 2px;
+	border-color:#BECCFF ;
+	width: 80px;
+	height: 80px;
+	background:#EAEEFF ;
+	border-radius: 10px;
+}
+#actionButton{
+	background: linear-gradient(to bottom,#001150 , #000D3E , #00092C , #00051A , #000000 );
+
+}
+#iteracion{
+	text-align: center;
+}
+#result1{
+	text-align: center;
+	
+}
+#valeatoria{
+	font-size: 17px;
+	font-weight: bold;
+	color: #160081;
+}
+#tipoSim{
+	width: 100px;
+}
+#provab1{
+	font-size: 15px;
+	font-weight: w300;
+	color: #470011;
+}
+#caraname{
+	font-weight: bold;
+	color: #470011;
+}
+#coinRep{
+	font-size: 17px;
+	font-weight: w300;
+	color: #470011;
+}
