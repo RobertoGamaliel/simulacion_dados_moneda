@@ -171,6 +171,7 @@ async function f1() {
 				<div id='provab1'>prov: ${pr12}% </div>
 				<div class='ms-5' id='rep1'>Rep: ${p12} </div>
 			</div>`;
+			drwarChart1(p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12);
 		}
 	}
 
@@ -245,9 +246,64 @@ async function f1() {
 		<div id='provab1'>prov: ${pr12}% </div>
 		<div class='ms-5' id='rep1'>Rep: ${p12} </div>
 	</div>`;
-		
+	drwarChart1(p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12);	
 	
 	
 	document.getElementById("actionButton").innerHTML="COMENZAR SIMULACIÓN";
     // 10
+}
+
+function drwarChart1(r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12){
+	var canvas=document.getElementById('myChart').getContext('2d');
+	const labels = [,
+			    'X=2',
+			    'X=3',
+			    'X=4',
+			    'X=5',
+			    'X=6',
+			    'X=7',
+			    'X=8',
+			    'X=9',
+			    'X=10',
+			    'X=11',
+			    'X=12'
+			  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+    	type:'bar',
+      label: 'Lanzamientos acertados',
+      backgroundColor: ['rgb(54, 162, 235)','rgb(255, 99, 132)'],
+      borderColor: ['rgb(255, 99, 132)','rgb(54, 162, 235)'],
+      data: [0, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12],
+    }]
+  };
+
+  const config = {
+     type: 'scatter',
+    data: data,
+    options: {
+	    scales: {
+	      y: {
+	        beginAtZero: true
+	      }
+	    }
+	  }
+  };
+
+  try{
+  	var chartExist = Chart.getChart("myChart"); // <canvas> id
+    if (chartExist != undefined){ 
+      chartExist.destroy(); 
+    }
+  }catch(e){
+  	console.log(e); 
+  }
+  
+
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
 }
